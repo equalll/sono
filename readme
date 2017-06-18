@@ -1,0 +1,16 @@
+store state
+
+const state = {
+  ifContent:false,//试用页打开协议或法律政策
+  ifAlert:false,//统一提示框
+  userScroll:{},
+  goodsOrder:{},
+  tryOrder:{},
+  orderScroll:{},
+  htmlData:'',
+  alertData:{},
+  userInfo:{
+    "user_id":"",
+    "token":""
+  }
+}

@@ -1,0 +1,183 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+* {
+  -webkit-tap-highlight-color:rgba(255,255,255,0);
+  -webkit-transform-style: preserve-3d;
+-webkit-backface-visibility:hidden;
+  transform: translate3d(0,0,0)
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+  display: none;
+}
+html, body {
+  width: 100%;
+  font-family: "PingFang SC","STHeitiSC-Light","Helvetica-Light",Arial,sans-serif;
+  position: relative;
+  height: 100%;
+  font-size: 0.24rem;
+  color: #333333;
+}
+.abs{
+  position: absolute;
+}
+body {
+  background-color: #f4f4f4;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#app{
+  height: 100%;
+}
+.mainContent{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top:0;
+  overflow: hidden;
+  right: 0;
+  bottom: 0.8rem;
+  z-index: 10;
+
+}
+.mainContent.move-enter-active, .mainContent.move-leave-active {
+  transition: all 0.2s ease;
+}
+.mainContent.move-enter,.mainContent.move-leave-active {
+   opacity: 0;
+}
+
+
+#pullDown, #pullUp {
+  height:0.6rem;
+  line-height:0.6rem;
+  padding:0 0.3rem;
+  font-weight:bold;
+  font-size:12px;
+  background-color: #fff;
+  color: #cbcbcb;
+  text-align: center;
+}
+#pullDown {
+  opacity: 0;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+  display:inline-block;
+  vertical-align: text-top;
+  width:0.3rem;
+  height:0.3rem;
+  margin-right: 0.1rem;
+  background:url(../images/pull-icon.png) 0 0 no-repeat;
+  -webkit-background-size:0.3rem 0.6rem; background-size:0.3rem 0.6rem;
+  -webkit-transition-property:-webkit-transform;
+  -webkit-transition-duration:250ms;
+}
+#pullDown .pullDownIcon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+  -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+  -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+  background-position:0 100%;
+  -webkit-transform:rotate(0deg) translateZ(0);
+  -webkit-transition-duration:0ms;
+
+  -webkit-animation-name:loading;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+  from { -webkit-transform:rotate(0deg) translateZ(0); }
+  to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
