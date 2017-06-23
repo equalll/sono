@@ -71,6 +71,7 @@
         let _this = this
         orderJssdk(_this.$router.currentRoute.query.id, function (data) {
           wx.chooseWXPay({
+//            debug:true,
             timestamp: data.timeStamp,
             nonceStr: data.nonceStr,
             package: data.package,

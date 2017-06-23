@@ -88,13 +88,13 @@ export default {
             }
           ]
         }
-        store.commit("CLOSESPINNER")
-        store.commit("OPENALERT",a)
+        store.commit("CLOSESPINNER");
+        store.commit("OPENALERT",a);
         break;
       default:
         let o =  {
           title:"提示",
-          desc:_this.errorMsg[d.errcode]?_this.errorMsg[d.errcode]:d.errmsg,
+          desc:_this.errorMsg[d.errcode]?_this.errorMsg[d.errcode]:(d.errmsg?d.errmsg:d.errcode+":未知错误"),
           btn:[
             {
               name:"确定",
@@ -105,8 +105,8 @@ export default {
             }
           ]
         }
-        store.commit("CLOSESPINNER")
-        store.commit("OPENALERT",o)
+        store.commit("CLOSESPINNER");
+        store.commit("OPENALERT",o);
         break;
     }
   }

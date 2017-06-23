@@ -53,7 +53,7 @@ export default new Router({
       path: '/logistics', component: logistics
     },
     {
-      path: '/user', component: user,redirect: '/user/goods_order',
+      path: '/user', component: user, redirect: '/user/goods_order',
       children:[
         {
           path: '/user/goods_order', component: goods_order
