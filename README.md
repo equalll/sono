@@ -22,7 +22,7 @@ vue项目实战-sono
 
 ![sono](readme-images/3.png "sono")
 
-![sono](readme-images/4.jpg "sono")![sono](readme-images/5.jpg "sono")![sono](readme-images/6.jpg "sono")
+![sono](readme-images/4.jpg "sono")![sono](readme-images/5.jpg "sono")![sono](readme-images/6.png "sono")
 
 #### assets
 放公用的素材文件，如`reset.css`，重置样式，屏蔽差异性；`resize.js`，这里大家可以参考下[网易和淘宝移动WEB适配方案再分析](https://zhuanlan.zhihu.com/p/25216275)，这个项目用的就是同网易的那种做法，这里`win.rem = domWidth/6.4;`这里设置6.4的话，相当于640的设计稿（750的设计稿改成7.5即可），100px为1rem，这样可以方便开发；然后其余的是公用的图片文件。
