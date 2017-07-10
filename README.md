@@ -1,9 +1,11 @@
 vue项目实战-sono
 
 > vue vuex vue-router vuerify axios vue-infinite-scroll exif-js qs less
+
 =========================
+
 关于sono是一个什么东西，可以扫描下面二维码了解关于更多sono。
-![sono](resource-images/1.jpg "sono")
+![sono](readme-images/1.jpg "sono")
 
 ### vue之我见
 
@@ -11,13 +13,13 @@ vue项目实战-sono
 
 相信很多前端开发者会和我一样有一个困惑，前端涉猎的东西这么多，如何知道自己该学什么，如何去判断这个东西该不该学。作为一个前端菜鸟，这里我说下我的观点。对于新的东西，抱着谦虚的态度去学习，不要抵触，就先试试看，学学看，当你花了两周甚至两个月，还发现很难或者不喜欢或者觉得不好，这个时候可以试着放弃的，暂时的放弃，其实不用太在乎你学的东西有没有用，你学了，它就是有用的。其实很多东西我也是这么学的，比如前面说的 meteor 、react、webgl、php、PWA等。
 
-/捂脸，原谅我，我是一个容易扯远的人。这里来说vue，sono的[第一个版本](https://github.com/yuwanli/sono-1.0)是用的单页面的形式，具体的大家可以看[https://github.com/yuwanli/sono-1.0](https://github.com/yuwanli/sono-1.0)，会发现，项目会比较大（零散），很碎片化，其实这个后期的维护也很麻烦，特别是又一段时间没去看过代码，然后得修改代码的时候，就想把自己打一顿（写的什么鬼）。所以之后我就开始去了解各种框架，立志把这个项目重写。直到遇到vue，完全投入学了一个都星期之后，就打算重写了，也就有了现在大家看到的这个版本。
+(/捂脸)原谅我，我是一个容易扯远的人。这里来说vue，sono的[第一个版本](https://github.com/yuwanli/sono-1.0)是用的单页面的形式，具体的大家可以看[https://github.com/yuwanli/sono-1.0](https://github.com/yuwanli/sono-1.0)，会发现，项目会比较大（零散），很碎片化，其实这个后期的维护也很麻烦，特别是又一段时间没去看过代码，然后得修改代码的时候，就想把自己打一顿（写的什么鬼）。所以之后我就开始去了解各种框架，立志把这个项目重写。直到遇到vue，完全投入学了一个都星期之后，就打算重写了，也就有了现在大家看到的这个版本。
 
 ### sono项目结构
 
 可扫描下面二维码直接查看该项目-[sono](http://www.sono.mobi/)
 
-![sono](resource-images/3.png "sono")
+![sono](readme-images/3.png "sono")
 
 #### assets
 放公用的素材文件，如`reset.css`，重置样式，屏蔽差异性；`resize.js`，这里大家可以参考下[网易和淘宝移动WEB适配方案再分析](https://zhuanlan.zhihu.com/p/25216275)，这个项目用的就是同网易的那种做法，这里`win.rem = domWidth/6.4;`这里设置6.4的话，相当于640的设计稿（750的设计稿改成7.5即可），100px为1rem，这样可以方便开发；然后其余的是公用的图片文件。
@@ -108,7 +110,7 @@ export default new Router({
 
 这里要说的就是，该项目用的[history](https://router.vuejs.org/zh-cn/essentia这ls/history-mode.html)模式，这个需要服务器端进行路由配置；`path: '/user', component: user, redirect: '/user/goods_order',`然后这里的redirect，因为打开个人中心页面
 
-![个人中心](resource-images/2.png "个人中心")
+![个人中心](readme-images/2.png "个人中心")
 
 的时候，这个下面有两个子路由，这边需要做一个默认跳转的处理，之前没用这种方式的时候，尝试了很多方法，效果都不好，这里可以mark一下；` path: '*', redirect: '/index'`这个也是做了一个默认路由跳转的处理。
 
