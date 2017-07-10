@@ -5,6 +5,7 @@ vue项目实战-sono
 --------------------
 
 关于sono是一个什么东西，可以扫描下面二维码了解关于更多sono。
+
 ![sono](readme-images/1.jpg "sono")
 
 ### vue之我见
